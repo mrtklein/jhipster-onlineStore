@@ -1,7 +1,7 @@
 /** Product sold by the Online Store */
 entity Product{
   name String required
-  description String 
+  description String
   price BigDecimal required min(0)
   size Size required
   image ImageBlob
