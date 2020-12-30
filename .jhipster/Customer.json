@@ -4,46 +4,34 @@
     {
       "fieldName": "firstName",
       "fieldType": "String",
-      "fieldValidateRules": [
-        "required"
-      ]
+      "fieldValidateRules": ["required"]
     },
     {
       "fieldName": "lastName",
       "fieldType": "String",
-      "fieldValidateRules": [
-        "required"
-      ]
+      "fieldValidateRules": ["required"]
     },
     {
       "fieldName": "gender",
       "fieldType": "Gender",
       "fieldValues": "MALE,FEMALE,OTHER",
-      "fieldValidateRules": [
-        "required"
-      ]
+      "fieldValidateRules": ["required"]
     },
     {
       "fieldName": "email",
       "fieldType": "String",
-      "fieldValidateRules": [
-        "pattern"
-      ],
+      "fieldValidateRules": ["pattern"],
       "fieldValidateRulesPattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
     },
     {
       "fieldName": "phone",
       "fieldType": "String",
-      "fieldValidateRules": [
-        "required"
-      ]
+      "fieldValidateRules": ["required"]
     },
     {
       "fieldName": "adressLine1",
       "fieldType": "String",
-      "fieldValidateRules": [
-        "required"
-      ]
+      "fieldValidateRules": ["required"]
     },
     {
       "fieldName": "adressLine2",
@@ -52,16 +40,12 @@
     {
       "fieldName": "city",
       "fieldType": "String",
-      "fieldValidateRules": [
-        "required"
-      ]
+      "fieldValidateRules": ["required"]
     },
     {
       "fieldName": "country",
       "fieldType": "String",
-      "fieldValidateRules": [
-        "required"
-      ]
+      "fieldValidateRules": ["required"]
     }
   ],
   "relationships": [
@@ -69,8 +53,9 @@
       "relationshipType": "one-to-one",
       "otherEntityName": "user",
       "otherEntityRelationshipName": "customer",
+      "relationshipValidateRules": "required",
       "relationshipName": "user",
-      "otherEntityField": "id",
+      "otherEntityField": "login",
       "ownerSide": true
     },
     {
@@ -90,5 +75,5 @@
   "readOnly": false,
   "embedded": false,
   "clientRootFolder": "",
-  "applications": "*"
+  "applications": ["store"]
 }
